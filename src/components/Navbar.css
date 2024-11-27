@@ -1,0 +1,142 @@
+.navbar-container {
+  width: 100%;
+  background: linear-gradient(90deg, #8eccff, #3289d0, #146fb9, #034982);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin-bottom: -4rem;
+}
+
+.navbar-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.8rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -4rem;
+}
+
+.navbar-logo-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo-section:hover {
+  transform: scale(1.02);
+}
+
+.navbar-logo {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-links {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.nav-link {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.86rem;
+  font-weight: 600;
+  position: relative;
+  padding: 0.6rem 0;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(45deg, #007bff, #00bfff);
+  transition: width 0.3s ease;
+  border-radius: 3px;
+}
+
+.nav-link:hover {
+  color: white;
+  transform: translateY(-1px);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar-contact-btn {
+  background: white;
+  color: #1976d2;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+}
+
+.navbar-contact-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: #1a237e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
+}
+
+.navbar-contact-btn:active {
+  transform: translateY(0);
+}
+
+/* Updated responsive styles */
+@media (max-width: 768px) {
+  .navbar-content {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1.2rem;
+  }
+
+  .navbar-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  .navbar-logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+  }
+
+  .navbar-contact-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
